@@ -23,7 +23,7 @@ namespace BussinessLogic
             //validatie: bv zijn beide lijsten even groot, zijn alle prijzen beschikbaar,..
             for (int i = 0; i < biernamen.Count; i++)
             {
-                _bierprijzen.Add(biernamen[0], bierprijzen[0]);
+                _bierprijzen.Add(biernamen[i], bierprijzen[i]);
             }
             return _bierprijzen;
         }
