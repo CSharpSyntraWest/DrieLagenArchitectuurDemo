@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace BussinessLogic
 {
 
-    public class BierenPrijzenService
+    public class BierenPrijzenService : IBierenPrijzenService
     {
         private IDictionary<string, double> _bierprijzen;
         private IDataService _bierenNamendata;
@@ -18,8 +18,8 @@ namespace BussinessLogic
         }
         public IDictionary<string, double> GeefBierenMetPrijzen()
         {
-           IList<string> biernamen =  _bierenNamendata.GeefAlleBiernamen();
-           IList<double> bierprijzen = _bierenPrijzendata.GeefAllePrijzen();
+            IList<string> biernamen = _bierenNamendata.GeefAlleBiernamen();
+            IList<double> bierprijzen = _bierenPrijzendata.GeefAllePrijzen();
             //validatie: bv zijn beide lijsten even groot, zijn alle prijzen beschikbaar,..
             for (int i = 0; i < biernamen.Count; i++)
             {
